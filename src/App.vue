@@ -1,31 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <v-app>
+    <div>
+      <v-toolbar dark>
+        <v-toolbar-title>Conta</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+          <router-link to="/" tag="button">
+            <v-btn class="link" text>Home</v-btn>
+          </router-link>
+          <router-link to="/cidades" tag="button">
+            <v-btn class="link" text>Cidades</v-btn>
+          </router-link>
+          <router-link to="/agencias" tag="button">
+            <v-btn class="link" text>Agências</v-btn>
+          </router-link>
+          <router-link to="/clientes" tag="button"s>
+            <v-btn class="link" text>Clientes</v-btn>
+          </router-link>
+        </v-toolbar-items>
+      </v-toolbar>
     </div>
-    <router-view/>
-  </div>
+    <router-view></router-view>
+  </v-app>
 </template>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style scoped>
 </style>
+
